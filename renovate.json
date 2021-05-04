@@ -1,0 +1,75 @@
+{
+    "rangeStrategy": "replace",
+    "timezone": "Asia/Seoul",
+    "schedule": [
+        "after 10pm and before 5am on every weekday",
+        "every weekend"
+    ],
+    "lockFileMaintenance": {
+        "enabled": true,
+        "schedule": "after 10pm on sunday",
+        "automerge": true,
+        "automergeType": "branch"
+    },
+    "lazyGrouping": true,
+    "rebaseWhen": "auto",
+    "stabilityDays": 3,
+    "prHourlyLimit": 2,
+    "prCreation": "not-pending",
+    "prNotPendingHours": 25,
+    "masterIssue": "true",
+    "masterIssueAutoclose": "true",
+    "pruneStaleBranches": true,
+    "requiredStatusChecks": null,
+    "updateNotScheduled": true,
+    "dependencyDashboard": true,
+    "dependencyDashboardAutoclose": true,
+    "labels": [
+        "dependencies"
+    ],
+    "packageRules": [
+        {
+            "depTypeList": ["devDependencies"],
+            "updateTypes": ["minor", "patch", "pin", "digest"],
+            "automerge": true,
+            "automergeType": "branch"
+        },
+        {
+            "depTypeList": ["dependencies"],
+            "updateTypes": ["minor", "patch", "pin", "digest"],
+            "automerge": true,
+            "automergeType": "branch"
+        },
+        {
+            "packagePatterns": ["^eslint"],
+            "groupName": "eslint packages"
+        },
+        {
+            "packagePatterns": ["^sequelize"],
+            "groupName": "sequelize packages"
+        },
+        {
+            "packageNames": ["babel"],
+            "packagePatterns": ["^@babel/", "^babel"],
+            "groupName": "babel packages"
+        },
+        {
+            "packageNames": ["nuxtjs"],
+            "packagePatterns": ["^@nuxtjs/", "^nuxtjs"],
+            "groupName": "nuxtjs packages"
+        },
+        {
+            "packagePatterns": ["^vue", "^vue2"],
+            "groupName": "vue packages"
+        },
+        {
+            "packagePatterns": ["^less"],
+            "groupName": "less packages"
+        }
+    ],
+    "vulnerabilityAlerts": {
+        "labels": ["security vulnerability"],
+        "assignees": ["@henrychoi7"]
+    },
+    "suppressNotifications": ["prIgnoreNotification"]
+}
