@@ -1,2 +1,2 @@
-# renovate-config-public
-Renovate configuration for public repositories.
+# Renovate
+Renovate presets for Empo public repositories.
