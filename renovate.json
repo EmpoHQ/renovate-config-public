@@ -6,7 +6,7 @@
         "every weekend"
     ],
     "lockFileMaintenance": {
-        "enabled": true,
+        "enabled": false,
         "schedule": "after 10pm on sunday",
         "automerge": true,
         "automergeType": "branch"
